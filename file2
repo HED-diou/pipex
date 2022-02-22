@@ -1,0 +1,10 @@
+ft_split.c
+ft_split.o
+ft_strdup.c
+ft_strdup.o
+ft_strjoin.c
+ft_strjoin.o
+ft_strlen.c
+ft_strlen.o
+ft_strtrim.c
+ft_strtrim.o
