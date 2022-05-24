@@ -6,7 +6,7 @@
 /*   By: hed-diou <hed-diou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 22:09:38 by hed-diou          #+#    #+#             */
-/*   Updated: 2021/12/21 22:43:23 by hed-diou         ###   ########.fr       */
+/*   Updated: 2022/02/13 13:28:34 by hed-diou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char	*get_path(char *cmd, char **envp)
 	char	**path;
 
 	i = -1;
+	if (access(cmd, X_OK) == 0)
+		return (cmd);
 	path = ft_split(envp[ft_pathindex(envp)], ':');
 	path[0] = ft_strtrim(path[0], "PATH=");
 	while (path[++i])
